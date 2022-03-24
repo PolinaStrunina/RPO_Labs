@@ -24,13 +24,13 @@ add_library( # Sets the name of the library.
         native-lib.cpp)
 
 add_library(spdlog STATIC IMPORTED)
-set_target_properties(spdlog PROPERTIES IMPORTED_LOCATION /home/futurescope/AndroidStudioProjects/libs/spdlog/build/${ANDROID_ABI}/libspdlog.a)
+set_target_properties(spdlog PROPERTIES IMPORTED_LOCATION /home/futurescope/RPO_Labs/rpo2022-main/libs/spdlog/build/${ANDROID_ABI}/libspdlog.a)
 
 add_library(mbedcrypto SHARED IMPORTED)
 set_target_properties(mbedcrypto PROPERTIES IMPORTED_LOCATION
         ${CMAKE_CURRENT_SOURCE_DIR}/../nativeLibs/${ANDROID_ABI}/libmbedcrypto.so)
-target_include_directories(fclient PUBLIC /home/futurescope/AndroidStudioProjects/libs/spdlog/spdlog/include
-        /home/futurescope/AndroidStudioProjects/libs/mbedtls/mbedtls/include)
+target_include_directories(fclient PUBLIC /home/futurescope/RPO_Labs/rpo2022-main/libs/spdlog/spdlog/include
+        /home/futurescope/RPO_Labs/rpo2022-main/libs/mbedtls/mbedtls/include)
 
 
 # Searches for a specified prebuilt library and stores the path as a
